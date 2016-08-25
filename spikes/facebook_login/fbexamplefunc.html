@@ -80,24 +80,24 @@
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log(response);
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-    FB.api('me?fields=name,email,gender,birthday,first_name,last_name,location', function(response)
+    FB.api('me?fields=name,email,gender,birthday,first_name,last_name,location,picture', function(response)
     {
+      if (response && !response.error) {
       document.getElementById('status').innerHTML =
+        '<img src="' + response.picture.data.url + '" /><br/>'+
         'Thanks for logging in, ' + response.name + '!' +
-        '<br>email: ' + response.email + 
-        '<br>gender: ' + response.gender +
-        '<br>birthday: ' + response.birthday +
-        '<br>first_name: ' + response.first_name +
-        '<br>last_name: ' + response.last_name +
-        '<br>location: ' + response.location.name;
+        '<br/>email: ' + response.email + 
+        '<br/>gender: ' + response.gender +
+        '<br/>birthday: ' + response.birthday +
+        '<br/>first_name: ' + response.first_name +
+        '<br/>last_name: ' + response.last_name +
+        '<br/>location: ' + response.location.name;
       console.log("the email is: ");
       console.log(response);
+      }
+      else {
+      document.getElementById('status').innerHTML = "Errore nel login :("
+      }
     }
     )
   }
