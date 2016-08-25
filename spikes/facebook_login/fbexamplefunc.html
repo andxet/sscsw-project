@@ -42,7 +42,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1835553620006591',
+    appId      : '1734810780102328',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -81,10 +81,25 @@
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
+      console.log(response);
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
+    FB.api('me?fields=name,email,gender,birthday,first_name,last_name,location', function(response)
+    {
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!' +
+        '<br>email: ' + response.email + 
+        '<br>gender: ' + response.gender +
+        '<br>birthday: ' + response.birthday +
+        '<br>first_name: ' + response.first_name +
+        '<br>last_name: ' + response.last_name +
+        '<br>location: ' + response.location.name;
+      console.log("the email is: ");
+      console.log(response);
+    }
+    )
   }
 </script>
 
@@ -94,7 +109,7 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email,user_birthday,user_location" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
