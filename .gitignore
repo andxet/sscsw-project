@@ -10,3 +10,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/SSCSWeb project/nbproject/private/
+/spikes/AsyncChat/target/
+/spikes/HelloStatelessWar/target/
+/sscsweb/nbproject/private/
+/sscsw-netbeans/nbproject/private/
+/sscsweb-netbeans/nbproject/private/
+/sscsweb-netbeans/sscsweb-netbeans-war/nbproject/private/
