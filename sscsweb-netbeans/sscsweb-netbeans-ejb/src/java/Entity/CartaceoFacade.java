@@ -11,29 +11,11 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
-<<<<<<< HEAD
- * @author andrea
-=======
  * @author elia
->>>>>>> origin/master
  */
 @Stateless
-public class UserFacade extends AbstractFacade<User> implements UserFacadeLocal {
+public class CartaceoFacade extends AbstractFacade<Cartaceo> implements CartaceoFacadeLocal {
 
-<<<<<<< HEAD
-    @PersistenceContext(unitName = "sscsweb-netbeans-ejbPU")
-    private EntityManager em;
-
-    @Override
-    protected EntityManager getEntityManager() {
-        return em;
-    }
-
-    public UserFacade() {
-        super(User.class);
-    }
-    
-=======
   @PersistenceContext(unitName = "sscsweb-netbeans-ejbPU")
   private EntityManager em;
 
@@ -42,9 +24,8 @@ public class UserFacade extends AbstractFacade<User> implements UserFacadeLocal 
     return em;
   }
 
-  public UserFacade() {
-    super(User.class);
+  public CartaceoFacade() {
+    super(Cartaceo.class);
   }
   
->>>>>>> origin/master
 }

@@ -10,11 +10,16 @@ import javax.ejb.Local;
 
 /**
  *
+<<<<<<< HEAD
  * @author andrea
+=======
+ * @author elia
+>>>>>>> origin/master
  */
 @Local
 public interface UserFacadeLocal {
 
+<<<<<<< HEAD
     void create(User user);
 
     void edit(User user);
@@ -29,4 +34,20 @@ public interface UserFacadeLocal {
 
     int count();
     
+=======
+  void create(User user);
+
+  void edit(User user);
+
+  void remove(User user);
+
+  User find(Object id);
+
+  List<User> findAll();
+
+  List<User> findRange(int[] range);
+
+  int count();
+  
+>>>>>>> origin/master
 }
