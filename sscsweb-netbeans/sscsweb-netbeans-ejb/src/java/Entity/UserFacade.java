@@ -11,29 +11,11 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
-<<<<<<< HEAD
- * @author andrea
-=======
  * @author elia
->>>>>>> origin/master
  */
 @Stateless
 public class UserFacade extends AbstractFacade<User> implements UserFacadeLocal {
 
-<<<<<<< HEAD
-    @PersistenceContext(unitName = "sscsweb-netbeans-ejbPU")
-    private EntityManager em;
-
-    @Override
-    protected EntityManager getEntityManager() {
-        return em;
-    }
-
-    public UserFacade() {
-        super(User.class);
-    }
-    
-=======
   @PersistenceContext(unitName = "sscsweb-netbeans-ejbPU")
   private EntityManager em;
 
@@ -46,5 +28,4 @@ public class UserFacade extends AbstractFacade<User> implements UserFacadeLocal 
     super(User.class);
   }
   
->>>>>>> origin/master
 }
