@@ -34,11 +34,8 @@
         <button type="submit" class="btn btn-primary">Accedi</button>
       </form>
       Oppure accedi con<br/>
-      <fb:login-button scope="public_profile,email,user_birthday,user_location" onlogin="checkLoginState();">
-      </fb:login-button>
       <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div><br/>      
-      <fb:login-button scope="public_profile,email,user_birthday,user_location" onlogin="checkLoginState();">
-      </fb:login-button>
+      <fb:login-button scope="public_profile,email,user_birthday,user_location" onlogin="checkLoginState();" />
     </div>
   </jsp:body>
 </t:main-layout>
