@@ -15,21 +15,22 @@
 <html>
   <head>
     <title>${pageTitle}</title>
+    <link href="css/general.css" rel="stylesheet" type="text/css">
     <%@include  file="../../includes/head.html" %>    
     <jsp:invoke fragment="head"/>
-    
+
   </head>
   <body>
+    <header>
+      <%@include  file="../../includes/header.html" %>
+    </header>
     <div class="container">
-      <div id="pageheader">
-        <%@include  file="../../includes/header.html" %>
-      </div>
-      <div id="body">
-        <jsp:doBody/>
-      </div>
-      <div id="pagefooter">
+      <jsp:doBody/>
+    </div>
+    <footer>
+      <div class="container">
         <%@include  file="../../includes/footer.html" %>
       </div>
-    </div>
+    </footer>
   </body>
 </html>

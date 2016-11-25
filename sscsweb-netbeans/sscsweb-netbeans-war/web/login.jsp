@@ -11,27 +11,58 @@
   <jsp:attribute name="head">      
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="254239845195-ov4snslrjg9bpnvoq7tqtdd7priptm6d.apps.googleusercontent.com">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
   </jsp:attribute>
   <jsp:body>
-    <div>    
-      <h2>Inserisci i tuoi dati per effettuare il login nel sito</h2>
-      <form id="login-form" method="POST" class="login-form" action="Login?action=Login"><br/>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="username" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary">Accedi</button>
-      </form>
-      Oppure accedi con<br/>
-      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div><br/>      
-      <fb:login-button scope="public_profile,email,user_birthday,user_location" onlogin="checkLoginState();" />
-      <script type="text/javascript" src="js/facebook-scripts.js"></script>
-      <script src="https://apis.google.com/js/platform.js" async defer></script>
-      <script type="text/javascript" src="js/google-scripts.js"></script>
+
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+        <img src="img/mubit.jpg" class="login-logo" />
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+        <form id="login-form" method="POST" class="login-form" action="Login?action=Login"><br/>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+              <input type="text" class="form-control" id="username" placeholder="Mail">
+            </div>
+
+            <div class="input-group">
+              <div class="input-group-addon"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></div>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Accedi</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <small>Oppure</small>
+          </div>
+          <div class="col-md-12">
+            <a href="register.jsp"><u>Registrati</u></a><br/>
+          </div>
+          <div class="col-md-6">
+            <center><div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div></center>
+          </div>
+          <div class="col-md-6">
+            <fb:login-button scope="public_profile,email,user_birthday,user_location" onlogin="checkLoginState();" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script type="text/javascript" src="js/facebook-scripts.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="js/google-scripts.js"></script>
+
   </jsp:body>
 </t:main-layout>

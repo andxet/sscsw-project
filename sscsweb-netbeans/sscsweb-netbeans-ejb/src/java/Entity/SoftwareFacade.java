@@ -26,6 +26,5 @@ public class SoftwareFacade extends AbstractFacade<Software> implements Software
 
   public SoftwareFacade() {
     super(Software.class);
-  }
-  
+  }  
 }
